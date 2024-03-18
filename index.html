@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title> title </title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <!-- Boxicons CDN Link -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="{{ url_for('static',filename='jquery-3.7.1.min.js') }}"></script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class="bx bxl- icon"></i>
+      <div class="logo_name" style="font-size:15px; padding-top:30px;">
+        <p>project title</p>
+      </div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+
+    <ul class="nav-list" style="margin-top:30px;">
+      <li class="active">
+        <a href="home">
+          <i class="bx bx-grid-alt" style="font-size: 36px;"></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+
+      <li>
+        <a href="eda">
+          <i class="bx bx-select-multiple" style="font-size: 36px;"></i>
+          <span class="links_name">EDA</span>
+        </a>
+        <span class="tooltip">EDA</span>
+      </li>
+      <li>
+        <a href="model_parameter">
+          <i class="bx bx-line-chart" style="font-size: 36px;"></i>
+          <span class="links_name">Model Parameters</span>
+        </a>
+        <span class="tooltip">Model Parameters</span>
+      </li>
+
+      <li>
+        <a href="detector">
+          <i class="bx bx-clinic" style="font-size: 36px;"></i>
+          <span class="links_name">Detector</span>
+        </a>
+        <span class="tooltip">Detector</span>
+      </li>
+
+      <li>
+        <a href="/">
+          <i class="bx bx-log-out" style="font-size: 36px;"></i>
+          <span class="links_name">Log out</span>
+        </a>
+        <span class="tooltip">Log out</span>
+      </li>
+
+
+    </ul>
+  </div>
+  <section class="home-section" style="padding: 30px;letter-spacing: 2px;">
+    <div class="switch" style="padding-top: 3px; float: right;">
+      <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+      <label for="language-toggle"></label>
+      <span class="on">EN</span>
+      <span class="off">KA</span>
+    </div>
+    <div data-lang='en' class="home_header">
+      Home
+    </div>
+    <div data-lang="ka" class="home_header" style="display: none;">
+      ಇತ್ತೀಚಿನ ದಿನಗಳಲ್ಲಿ
+    </div>
+
+    <div class="text" style="line-height:30px;">
+      <span data-lang="en">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+        minus reprehenderit
+        tenetur explicabo
+        repellendus
+        soluta labore ipsa odio dolorum fugiat ratione voluptatum consequuntur architecto sunt pariatur, minima, nisi
+        aspernatur laudantium possimus corrupti nulla. Dolore repellat, iste excepturi in reiciendis, error, recusandae
+        assumenda amet tenetur ipsa provident. Magnam pariatur dolore debitis. Alias incidunt, vel aliquam officiis
+        doloremque maxime nima illum hic reprehenderit eius exercitationem possimus fugiat in quod eum
+        laborum distinctio officiis corrupti cumque qui quos dolor libero, itaque rerum quas. Est quo veniam, delectus
+        doloremque libero maxime quisquam tempora possimus! Sint modi consequuntur minus magni aspernatur.</span>
+      <span data-lang="ka" class="ka">ಇತ್ತೀಚಿನ ದಿನಗಳಲ್ಲಿ, ತಂತ್ರಜ್ಞಾನವು ಜೀವನದ
+        ಪ್ರಮುಖ ಭಾಗವಾಗಿದೆ. ಇದು ಜನರಿಗೆ ಕೆಲಸವನ್ನು ಸುಲಭಗೊಳಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ಮತ್ತು ಜೀವನವನ್ನು ಉತ್ತಮಗೊಳಿಸುತ್ತದೆ. ಅದರಲ್ಲಿ
+        ಕಂಪ್ಯೂಟರ್ ಕೂಡ ಒಂದು. ಕಂಪ್ಯೂಟರ್ ಒಂದು ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಾಧನವಾಗಿದೆ. ಇದು ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆ, ಲೆಕ್ಕಾಚಾರಗಳು, ಬರವಣಿಗೆ,
+        ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದು, ಮುದ್ರಣ ಇತ್ಯಾದಿಗಳಂತಹ ಅನೇಕ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ. ನಾವು ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
+        ಕಂಪ್ಯೂಟರ್‌ಗಳ ಪ್ರಾಮುಖ್ಯತೆಯ ಕುರಿತು ಸುಲಭವಾದ ಪ್ರಬಂಧಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲಿದ್ದೇವೆ. ಈ ಪ್ರಬಂಧವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
+        ಸಹಾಯಕವಾಗಿದೆ.ಇತ್ತೀಚಿನ ದಿನಗಳಲ್ಲಿ, ತಂತ್ರಜ್ಞಾನವು ಜೀವನದ ಪ್ರಮುಖ ಭಾಗವಾಗಿದೆ. ಇದು ಜನರಿಗೆ ಕೆಲಸವನ್ನು ಸುಲಭಗೊಳಿಸಲು ಸಹಾಯ
+        ಮಾಡುತ್ತದೆ ಮತ್ತು ಜೀವನವನ್ನು ಉತ್ತಮಗೊಳಿಸುತ್ತದೆ. ಅದರಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ಕೂಡ ಒಂದು. ಕಂಪ್ಯೂಟರ್ ಒಂದು ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಾಧನವಾಗಿದೆ.
+        ಇದು ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆ, ಲೆಕ್ಕಾಚಾರಗಳು, ಬರವಣಿಗೆ, ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದು, ಮುದ್ರಣ ಇತ್ಯಾದಿಗಳಂತಹ ಅನೇಕ ಕಾರ್ಯಗಳನ್ನು
+        ನಿರ್ವಹಿಸುತ್ತದೆ. ನಾವು ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಂಪ್ಯೂಟರ್‌ಗಳ ಪ್ರಾಮುಖ್ಯತೆಯ ಕುರಿತು ಸುಲಭವಾದ ಪ್ರಬಂಧಗಳನ್ನು
+        ಹಂಚಿಕೊಳ್ಳಲಿದ್ದೇವೆ. ಈ ಪ್ರಬಂಧವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಹಾಯಕವಾಗಿದೆ.ಇತ್ತೀಚಿನ ದಿನಗಳಲ್ಲಿ, ತಂತ್ರಜ್ಞಾನವು ಜೀವನದ ಪ್ರಮುಖ
+        ಭಾಗವಾಗಿದೆ. ಇದು ಜನರಿಗೆ ಕೆಲಸವನ್ನು ಸುಲಭಗೊಳಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ಮತ್ತು ಜೀವನವನ್ನು ಉತ್ತಮಗೊಳಿಸುತ್ತದೆ. ಅದರಲ್ಲಿ ಕಂಪ್ಯೂಟರ್
+        ಕೂಡ ಒಂದು. ಕಂಪ್ಯೂಟರ್ ಒಂದು ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಾಧನವಾಗಿದೆ. ಇದು ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆ, ಲೆಕ್ಕಾಚಾರಗಳು, ಬರವಣಿಗೆ, ಡೇಟಾವನ್ನು
+        ಸಂಗ್ರಹಿಸುವುದು, ಮುದ್ರಣ ಇತ್ಯಾದಿಗಳಂತಹ ಅನೇಕ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ. ನಾವು ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಂಪ್ಯೂಟರ್‌ಗಳ
+        ಪ್ರಾಮುಖ್ಯತೆಯ ಕುರಿತು ಸುಲಭವಾದ ಪ್ರಬಂಧಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲಿದ್ದೇವೆ. ಈ ಪ್ರಬಂಧವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಹಾಯಕವಾಗಿದೆ.</span>
+    </div>
+  </section>
+  <script>
+    $(function () {
+      checkLang();
+      $('#language-toggle').click(function () {
+        var lang = 'en';
+        if (this.checked) {
+          lang = 'ka';
+        }
+        $("[data-lang]").hide();
+        $("[data-lang='" + lang + "']").show();
+        var cookiedt = new Date();
+        cookiedt.setDate(cookiedt.getTime() + (30 * 24 * 60 * 60 * 1000))
+        document.cookie = 'lang=' + lang + '; expires=' + cookiedt;
+      })
+    })
+
+
+  </script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
